@@ -1,2 +1,2 @@
-class BoxesController < ApplicationController
+class Api::V1::BoxesController < ApplicationController
 end

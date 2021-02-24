@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :items
-      resources :boxes
+      resources :boxes do
+        resources :items
+      end
     end
   end
 

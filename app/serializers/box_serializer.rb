@@ -1,3 +1,5 @@
 class BoxSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :amount
+
+  has_many :items
 end

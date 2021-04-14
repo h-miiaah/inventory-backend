@@ -6,6 +6,7 @@ class Api::V1::BoxesController < ApplicationController
     end
 
     def create
+        binding.pry
         @box = Box.new(box_params)
         if @box.save
             render json: @box

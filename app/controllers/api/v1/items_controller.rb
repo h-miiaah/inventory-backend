@@ -11,7 +11,8 @@ class Api::V1::ItemsController < ApplicationController
         @item = @box.items.new(item_params)
         if @box.update_box_balance(@item) != 'Quantity not enough.'
             @item.save
-            render json: @item
+            # render json: @item
+            render json: @box
         else
             render json: {error: 'Quantity not enough.'} 
         end

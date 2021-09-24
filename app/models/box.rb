@@ -17,4 +17,18 @@ class Box < ApplicationRecord
         end
     end
 
+    def update_box_amount_on_delete(item)
+        if item.kind == 'add'
+            if self.amount >= item.quantity
+                self.amount = self.amount - item.quantity
+                self.save
+            else
+                return 'Quantity not enough.'
+            end
+        elsif item.kind == 'remove'
+                self.amount = self.amount + item.quantity
+                self.save
+        end
+    end
+
 end

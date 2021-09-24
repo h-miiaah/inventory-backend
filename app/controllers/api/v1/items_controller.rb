@@ -27,8 +27,12 @@ class Api::V1::ItemsController < ApplicationController
     def destroy
         @item = Item.find(params["id"])
         @box = Box.find(item.box_id)
-        @item.destroy
-        render json: @box
+        if @box.update_box_amount_on_delete(@item)
+            @item.destroy
+            render json: @box
+        else
+            render json: {error: 'Quantity not enough.'} 
+        end
     end
 
     private

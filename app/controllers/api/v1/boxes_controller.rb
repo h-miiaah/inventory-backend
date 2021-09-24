@@ -14,6 +14,13 @@ class Api::V1::BoxesController < ApplicationController
         end
     end
 
+    def update
+        @box = Box.find(params[:id])
+        @box.update(name: params["box"]["name"])
+        @box.save
+        render json: @box
+    end
+
     def show
         @box = Box.find(params[:id])
         render json: @box

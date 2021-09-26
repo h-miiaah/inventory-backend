@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Inventory Backend
 
-Things you may want to cover:
+This is the backend for the inventory program.
 
-* Ruby version
+# How To Start The Backend
 
-* System dependencies
+To run the backend run the command
 
-* Configuration
+```bash
+rails s -p 3001
+```
 
-* Database creation
+in your terminal and the backend server will open up.
+Then in the browser navigate to
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+http://localhost:3001/api/v1/boxes
+```

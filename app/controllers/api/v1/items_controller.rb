@@ -9,7 +9,7 @@ class Api::V1::ItemsController < ApplicationController
 
     def create
         @item = @box.items.new(item_params)
-        if @box.update_box_balance(@item) != 'Quantity not enough.'
+        if @box.update_box_amount(@item) != 'Quantity not enough.'
             @item.save
             # render json: @item
             render json: @box
@@ -26,7 +26,7 @@ class Api::V1::ItemsController < ApplicationController
 
     def destroy
         @item = Item.find(params["id"])
-        @box = Box.find(item.box_id)
+        @box = Box.find(@item.box_id)
         if @box.update_box_amount_on_delete(@item)
             @item.destroy
             render json: @box

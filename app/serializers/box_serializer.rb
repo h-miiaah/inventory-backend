@@ -3,3 +3,9 @@ class BoxSerializer < ActiveModel::Serializer
 
   has_many :items
 end
+
+=begin
+  
+creates the serialization for the box objects and thier attributes.
+  
+=end

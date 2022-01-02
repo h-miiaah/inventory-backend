@@ -9,7 +9,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'sqlite3', '~> 1.4'
 
 # pg for postgresql
-gem 'pg', '~> 0.18.4'
+# gem 'pg', '~> 0.18.4'
 
 # postgresql
 gem 'postgresql', '~> 1.0'

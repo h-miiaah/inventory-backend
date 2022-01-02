@@ -12,7 +12,7 @@ gem 'sqlite3', '~> 1.4'
 # gem 'pg', '~> 0.18.4'
 
 # postgresql
-gem 'postgresql', '~> 1.0'
+# gem 'postgresql', '~> 1.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
